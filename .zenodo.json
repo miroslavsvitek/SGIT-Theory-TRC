@@ -1,0 +1,21 @@
+{
+  "title": "SGIT–TRC: reproducible mathematical reference implementation",
+  "creators": [
+    {
+      "name": "Svítek, Miroslav",
+      "affiliation": "Czech Technical University in Prague"
+    }
+  ],
+  "description": "Version-independent reference software, selected archived analysis records, frozen configurations and mathematical tests for Spatiotemporal Geometry Integration Theory and Temporal Relational Closure. Passing unit tests do not imply independent reconstruction of every empirical EEG endpoint.",
+  "keywords": [
+    "SGIT",
+    "Temporal Relational Closure",
+    "EEG",
+    "Hodge decomposition",
+    "higher-order tensor",
+    "reproducibility"
+  ],
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "other-open"
+}
