@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "sgit-trc-reference"
+version = "0.1.0"
+description = "SGIT-TRC version-independent mathematical reference implementation; not a validated full replication"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.24,<3", "scipy>=1.10,<2"]
+[project.optional-dependencies]
+test = ["pytest>=7,<10"]
+[tool.setuptools.packages.find]
+where = ["src"]
