@@ -1,0 +1,2289 @@
+{
+  "experiment_id": "SGIT_G2B1_ALPHA_TMS_DIRECT_CAUSAL_CONSCIOUS_ACCESS_FINAL",
+  "status": "NOT_EVALUABLE_TOO_FEW",
+  "scientific_outcome_computed": true,
+  "behavioral_schema_gate": {
+    "valid": true,
+    "median_slow_active_minus_sham": -0.1700418290653567,
+    "median_fast_active_minus_sham": 0.6932685880980558,
+    "median_aligned": 0.21686695135808498,
+    "p": 0.03903
+  },
+  "primary": {
+    "N": 6,
+    "group_counts": {
+      "SLOW": 3,
+      "FAST": 3
+    },
+    "median_aligned_LVF": 0.09879479983338749,
+    "one_sided_signflip_p": 0.21875,
+    "p_type": "exact",
+    "minimum_N": 20,
+    "minimum_each_group": 8,
+    "minimum_trials_per_HIT_MISS_cell": 8,
+    "alpha": 0.025
+  },
+  "secondary": {
+    "N_RVF_paired": 3,
+    "median_aligned_RVF": -0.011501972964744922,
+    "p_RVF": 0.75,
+    "median_LVF_minus_RVF": 0.2188854817971532,
+    "p_LVF_minus_RVF": 0.25,
+    "neutral_N": 4,
+    "neutral_median_E": -0.024551118061957096,
+    "neutral_two_sided_p": 0.75,
+    "report_clean_N": 12,
+    "report_clean_median_aligned": -0.023909697062891047,
+    "report_clean_p": 0.5615234375
+  },
+  "subject_results": [
+    {
+      "subject": "S04",
+      "group": "SLOW",
+      "hemifields": {
+        "LVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 15,
+                "HIT": 21
+              },
+              "psi_observed": -0.037227918511439154,
+              "null_medians": {
+                "N12|3": 0.12387348733677139,
+                "N13|2": 0.1320731684158903,
+                "N23|1": 0.12769534344612815
+              },
+              "hard_null": 0.1320731684158903,
+              "delta_pp": -0.16930108692732948
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 20,
+                "HIT": 14
+              },
+              "psi_observed": 0.30190676980010095,
+              "null_medians": {
+                "N12|3": 0.1903246171241912,
+                "N13|2": 0.18308999399105902,
+                "N23|1": 0.15003518913068747
+              },
+              "hard_null": 0.1903246171241912,
+              "delta_pp": 0.11158215267590976
+            }
+          },
+          "E_active_minus_sham": -0.28088323960323924
+        },
+        "RVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 9,
+                "HIT": 23
+              },
+              "psi_observed": 0.07658839563524884,
+              "null_medians": {
+                "N12|3": 0.13634650156108138,
+                "N13|2": 0.08322811989522975,
+                "N23|1": 0.07984066328288812
+              },
+              "hard_null": 0.13634650156108138,
+              "delta_pp": -0.05975810592583254
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 10,
+                "HIT": 26
+              },
+              "psi_observed": 0.09232350991935832,
+              "null_medians": {
+                "N12|3": 0.08964608114306497,
+                "N13|2": 0.10958553906966051,
+                "N23|1": 0.1635835888099358
+              },
+              "hard_null": 0.1635835888099358,
+              "delta_pp": -0.07126007889057746
+            }
+          },
+          "E_active_minus_sham": 0.011501972964744922
+        }
+      },
+      "report_clean_LVF": {
+        "site_results": {
+          "ACTIVE": {
+            "counts": {
+              "MISS": 15,
+              "HIT": 20
+            },
+            "psi_observed": -0.041580077758701255,
+            "null_medians": {
+              "N12|3": 0.1149164667810911,
+              "N13|2": 0.1162615258288609,
+              "N23|1": 0.12124240349296406
+            },
+            "hard_null": 0.12124240349296406,
+            "delta_pp": -0.16282248125166532
+          },
+          "SHAM": {
+            "counts": {
+              "MISS": 20,
+              "HIT": 10
+            },
+            "psi_observed": 0.3901619753119262,
+            "null_medians": {
+              "N12|3": 0.22950831189264034,
+              "N13|2": 0.19841899805340052,
+              "N23|1": 0.1306795521603287
+            },
+            "hard_null": 0.22950831189264034,
+            "delta_pp": 0.16065366341928586
+          }
+        },
+        "E_active_minus_sham": -0.3234761446709512
+      },
+      "aligned_LVF": 0.28088323960323924,
+      "aligned_RVF": -0.011501972964744922
+    },
+    {
+      "subject": "S05",
+      "group": "SLOW",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 2, 1: 24}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 3, 1: 15}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 2, 1: 10}, min=5')"
+      }
+    },
+    {
+      "subject": "S13",
+      "group": "SLOW",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 0, 1: 19}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 26, 1: 4}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 15, 1: 4}, min=5')"
+      }
+    },
+    {
+      "subject": "S14",
+      "group": "SLOW",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 4, 1: 17}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 6, 1: 21}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 4, 1: 4}, min=5')"
+      }
+    },
+    {
+      "subject": "S19",
+      "group": "SLOW",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 2, 1: 27}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 6, 1: 28}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 2, 1: 21}, min=5')"
+      }
+    },
+    {
+      "subject": "S27",
+      "group": "SLOW",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 6, 1: 20}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 12, 1: 4}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "site_results": {
+          "ACTIVE": {
+            "counts": {
+              "MISS": 13,
+              "HIT": 16
+            },
+            "psi_observed": 0.10416284375968829,
+            "null_medians": {
+              "N12|3": 0.04829989249140185,
+              "N13|2": 0.09313139957934868,
+              "N23|1": 0.1442117026447597
+            },
+            "hard_null": 0.1442117026447597,
+            "delta_pp": -0.0400488588850714
+          },
+          "SHAM": {
+            "counts": {
+              "MISS": 6,
+              "HIT": 14
+            },
+            "psi_observed": -0.05892076970998837,
+            "null_medians": {
+              "N12|3": 0.08289821816444332,
+              "N13|2": 0.1830749034507269,
+              "N23|1": 0.06372428144347864
+            },
+            "hard_null": 0.1830749034507269,
+            "delta_pp": -0.2419956731607153
+          }
+        },
+        "E_active_minus_sham": 0.2019468142756439
+      }
+    },
+    {
+      "subject": "S35",
+      "group": "SLOW",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 10, 1: 5}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 6, 1: 7}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "site_results": {
+          "ACTIVE": {
+            "counts": {
+              "MISS": 10,
+              "HIT": 5
+            },
+            "psi_observed": 0.033109539021856926,
+            "null_medians": {
+              "N12|3": 0.035065800406626935,
+              "N13|2": 0.05208812510934217,
+              "N23|1": 0.01035779029198339
+            },
+            "hard_null": 0.05208812510934217,
+            "delta_pp": -0.018978586087485247
+          },
+          "SHAM": {
+            "counts": {
+              "MISS": 7,
+              "HIT": 8
+            },
+            "psi_observed": -0.016392749536590367,
+            "null_medians": {
+              "N12|3": 0.11835415192143983,
+              "N13|2": 0.08736371400226117,
+              "N23|1": 0.14000579582318223
+            },
+            "hard_null": 0.14000579582318223,
+            "delta_pp": -0.1563985453597726
+          }
+        },
+        "E_active_minus_sham": 0.13741995927228734
+      }
+    },
+    {
+      "subject": "S38",
+      "group": "SLOW",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 2, 1: 21}, min=8')"
+        },
+        "RVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 9,
+                "HIT": 21
+              },
+              "psi_observed": 0.21331575921759446,
+              "null_medians": {
+                "N12|3": 0.13452685974983564,
+                "N13|2": 0.20516918579251198,
+                "N23|1": 0.16471330788708105
+              },
+              "hard_null": 0.20516918579251198,
+              "delta_pp": 0.008146573425082487
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 12,
+                "HIT": 20
+              },
+              "psi_observed": 0.01730586352018888,
+              "null_medians": {
+                "N12|3": 0.19719226798428569,
+                "N13|2": 0.23927226427253503,
+                "N23|1": 0.12420142872700075
+              },
+              "hard_null": 0.23927226427253503,
+              "delta_pp": -0.22196640075234617
+            }
+          },
+          "E_active_minus_sham": 0.23011297417742865
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 2, 1: 14}, min=5')"
+      },
+      "aligned_RVF": -0.23011297417742865
+    },
+    {
+      "subject": "S39",
+      "group": "SLOW",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 11, 1: 4}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 29, 1: 6}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 11, 1: 0}, min=5')"
+      }
+    },
+    {
+      "subject": "S44",
+      "group": "SLOW",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 7, 1: 36}, min=8')"
+        },
+        "RVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 9,
+                "HIT": 36
+              },
+              "psi_observed": 0.1893570865839894,
+              "null_medians": {
+                "N12|3": 0.16632629951160327,
+                "N13|2": 0.21972292030539603,
+                "N23|1": 0.20061310056109244
+              },
+              "hard_null": 0.21972292030539603,
+              "delta_pp": -0.030365833721406638
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 9,
+                "HIT": 35
+              },
+              "psi_observed": -0.22333189694724934,
+              "null_medians": {
+                "N12|3": 0.11735132362758732,
+                "N13|2": 0.08164799540071052,
+                "N23|1": 0.028104887263083425
+              },
+              "hard_null": 0.11735132362758732,
+              "delta_pp": -0.3406832205748367
+            }
+          },
+          "E_active_minus_sham": 0.31031738685343
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 3, 1: 7}, min=5')"
+      },
+      "aligned_RVF": -0.31031738685343
+    },
+    {
+      "subject": "S46",
+      "group": "SLOW",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 28, 1: 6}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 20, 1: 1}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 28, 1: 1}, min=5')"
+      }
+    },
+    {
+      "subject": "S49",
+      "group": "SLOW",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 3, 1: 22}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 6, 1: 31}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 3, 1: 22}, min=5')"
+      }
+    },
+    {
+      "subject": "S52",
+      "group": "SLOW",
+      "hemifields": {
+        "LVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 18,
+                "HIT": 21
+              },
+              "psi_observed": 0.09389359796962354,
+              "null_medians": {
+                "N12|3": 0.10703771744047011,
+                "N13|2": 0.10481354926630837,
+                "N23|1": 0.1998628586820263
+              },
+              "hard_null": 0.1998628586820263,
+              "delta_pp": -0.10596926071240276
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 8,
+                "HIT": 15
+              },
+              "psi_observed": -0.09911869793027556,
+              "null_medians": {
+                "N12|3": 0.03491766935847822,
+                "N13|2": 0.01080835183773604,
+                "N23|1": -0.003400824355820918
+              },
+              "hard_null": 0.03491766935847822,
+              "delta_pp": -0.1340363672887538
+            }
+          },
+          "E_active_minus_sham": 0.02806710657635103
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 7, 1: 24}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 18, 1: 3}, min=5')"
+      },
+      "aligned_LVF": -0.02806710657635103
+    },
+    {
+      "subject": "S56",
+      "group": "SLOW",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 7, 1: 6}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 3, 1: 28}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 0, 1: 3}, min=5')"
+      }
+    },
+    {
+      "subject": "S58",
+      "group": "SLOW",
+      "hemifields": {
+        "LVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 18,
+                "HIT": 10
+              },
+              "psi_observed": -0.019960053468094457,
+              "null_medians": {
+                "N12|3": 0.052493250075695205,
+                "N13|2": 0.11605423973122607,
+                "N23|1": 0.02627903096791976
+              },
+              "hard_null": 0.11605423973122607,
+              "delta_pp": -0.1360142931993205
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 31,
+                "HIT": 12
+              },
+              "psi_observed": 0.0818586595689671,
+              "null_medians": {
+                "N12|3": 0.09619303643758081,
+                "N13|2": 0.13393503409297516,
+                "N23|1": 0.09418984832804145
+              },
+              "hard_null": 0.13393503409297516,
+              "delta_pp": -0.05207637452400807
+            }
+          },
+          "E_active_minus_sham": -0.08393791867531245
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 7, 1: 8}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "site_results": {
+          "ACTIVE": {
+            "counts": {
+              "MISS": 18,
+              "HIT": 10
+            },
+            "psi_observed": -0.019960053468094457,
+            "null_medians": {
+              "N12|3": 0.05100492205797456,
+              "N13|2": 0.11125022017958003,
+              "N23|1": 0.02365272627995835
+            },
+            "hard_null": 0.11125022017958003,
+            "delta_pp": -0.13121027364767449
+          },
+          "SHAM": {
+            "counts": {
+              "MISS": 31,
+              "HIT": 11
+            },
+            "psi_observed": 0.09270103152058512,
+            "null_medians": {
+              "N12|3": 0.10680907638978494,
+              "N13|2": 0.12359222730891427,
+              "N23|1": 0.09597616596189495
+            },
+            "hard_null": 0.12359222730891427,
+            "delta_pp": -0.030891195788329148
+          }
+        },
+        "E_active_minus_sham": -0.10031907785934534
+      },
+      "aligned_LVF": 0.08393791867531245
+    },
+    {
+      "subject": "S62",
+      "group": "SLOW",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 6, 1: 9}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 4, 1: 24}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "site_results": {
+          "ACTIVE": {
+            "counts": {
+              "MISS": 6,
+              "HIT": 8
+            },
+            "psi_observed": 0.1574845085688565,
+            "null_medians": {
+              "N12|3": 0.3855977862663135,
+              "N13|2": 0.22813906253512642,
+              "N23|1": 0.36258981008721547
+            },
+            "hard_null": 0.3855977862663135,
+            "delta_pp": -0.228113277697457
+          },
+          "SHAM": {
+            "counts": {
+              "MISS": 19,
+              "HIT": 11
+            },
+            "psi_observed": 1.3015826930246632,
+            "null_medians": {
+              "N12|3": 0.4507190016518914,
+              "N13|2": 0.4567403543476007,
+              "N23|1": 0.3885020109022215
+            },
+            "hard_null": 0.4567403543476007,
+            "delta_pp": 0.8448423386770625
+          }
+        },
+        "E_active_minus_sham": -1.0729556163745195
+      }
+    },
+    {
+      "subject": "S02",
+      "group": "FAST",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 0, 1: 18}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 6, 1: 28}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 0, 1: 3}, min=5')"
+      }
+    },
+    {
+      "subject": "S06",
+      "group": "FAST",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 18, 1: 7}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 2, 1: 25}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "site_results": {
+          "ACTIVE": {
+            "counts": {
+              "MISS": 13,
+              "HIT": 8
+            },
+            "psi_observed": 0.27378212345190267,
+            "null_medians": {
+              "N12|3": 0.1893553045930536,
+              "N13|2": 0.1337557223701587,
+              "N23|1": 0.1918750629175378
+            },
+            "hard_null": 0.1918750629175378,
+            "delta_pp": 0.08190706053436486
+          },
+          "SHAM": {
+            "counts": {
+              "MISS": 18,
+              "HIT": 6
+            },
+            "psi_observed": 0.4616667582988775,
+            "null_medians": {
+              "N12|3": 0.33037858993962876,
+              "N13|2": 0.1682093226062717,
+              "N23|1": 0.11068078827760722
+            },
+            "hard_null": 0.33037858993962876,
+            "delta_pp": 0.13128816835924872
+          }
+        },
+        "E_active_minus_sham": -0.04938110782488386
+      }
+    },
+    {
+      "subject": "S15",
+      "group": "FAST",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 7, 1: 27}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 7, 1: 32}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 4, 1: 6}, min=5')"
+      }
+    },
+    {
+      "subject": "S16",
+      "group": "FAST",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 1, 1: 30}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 27, 1: 5}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 1, 1: 13}, min=5')"
+      }
+    },
+    {
+      "subject": "S17",
+      "group": "FAST",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 19, 1: 5}, min=8')"
+        },
+        "RVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 14,
+                "HIT": 20
+              },
+              "psi_observed": 0.45810331026374196,
+              "null_medians": {
+                "N12|3": 0.2898132625095035,
+                "N13|2": 0.22908958363199516,
+                "N23|1": 0.2281946918404319
+              },
+              "hard_null": 0.2898132625095035,
+              "delta_pp": 0.16829004775423845
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 19,
+                "HIT": 11
+              },
+              "psi_observed": 0.1962215708493963,
+              "null_medians": {
+                "N12|3": 0.19424509959554156,
+                "N13|2": 0.1470715789139831,
+                "N23|1": 0.11640369135507088
+              },
+              "hard_null": 0.19424509959554156,
+              "delta_pp": 0.0019764712538547224
+            }
+          },
+          "E_active_minus_sham": 0.16631357650038373
+        }
+      },
+      "report_clean_LVF": {
+        "site_results": {
+          "ACTIVE": {
+            "counts": {
+              "MISS": 25,
+              "HIT": 10
+            },
+            "psi_observed": 0.2582904796364648,
+            "null_medians": {
+              "N12|3": 0.14288455010090773,
+              "N13|2": 0.162731815683606,
+              "N23|1": 0.13497578798961257
+            },
+            "hard_null": 0.162731815683606,
+            "delta_pp": 0.09555866395285878
+          },
+          "SHAM": {
+            "counts": {
+              "MISS": 19,
+              "HIT": 5
+            },
+            "psi_observed": 0.24705646230211972,
+            "null_medians": {
+              "N12|3": 0.14879356990719342,
+              "N13|2": 0.1530595120483627,
+              "N23|1": 0.1455291838052108
+            },
+            "hard_null": 0.1530595120483627,
+            "delta_pp": 0.09399695025375701
+          }
+        },
+        "E_active_minus_sham": 0.0015617136991017688
+      },
+      "aligned_RVF": 0.16631357650038373
+    },
+    {
+      "subject": "S25",
+      "group": "FAST",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 16, 1: 5}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 8, 1: 7}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "site_results": {
+          "ACTIVE": {
+            "counts": {
+              "MISS": 27,
+              "HIT": 11
+            },
+            "psi_observed": 0.21858241328195507,
+            "null_medians": {
+              "N12|3": 0.17519568340974034,
+              "N13|2": 0.17358409808318107,
+              "N23|1": 0.14879257593966377
+            },
+            "hard_null": 0.17519568340974034,
+            "delta_pp": 0.04338672987221473
+          },
+          "SHAM": {
+            "counts": {
+              "MISS": 16,
+              "HIT": 5
+            },
+            "psi_observed": 0.027821696071437085,
+            "null_medians": {
+              "N12|3": 0.1215636233321155,
+              "N13|2": 0.13582951874487953,
+              "N23|1": 0.08623167746385349
+            },
+            "hard_null": 0.13582951874487953,
+            "delta_pp": -0.10800782267344244
+          }
+        },
+        "E_active_minus_sham": 0.15139455254565717
+      }
+    },
+    {
+      "subject": "S31",
+      "group": "FAST",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 3, 1: 35}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 6, 1: 31}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 3, 1: 7}, min=5')"
+      }
+    },
+    {
+      "subject": "S32",
+      "group": "FAST",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 19, 1: 5}, min=8')"
+        },
+        "RVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 11,
+                "HIT": 14
+              },
+              "psi_observed": 0.2808578279886489,
+              "null_medians": {
+                "N12|3": 0.09785744555423313,
+                "N13|2": 0.17139846692320346,
+                "N23|1": 0.14399896073709256
+              },
+              "hard_null": 0.17139846692320346,
+              "delta_pp": 0.10945936106544543
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 16,
+                "HIT": 11
+              },
+              "psi_observed": 0.22818590291861304,
+              "null_medians": {
+                "N12|3": 0.1686169477908776,
+                "N13|2": 0.16253920750381418,
+                "N23|1": 0.17912151265234388
+              },
+              "hard_null": 0.17912151265234388,
+              "delta_pp": 0.04906439026626916
+            }
+          },
+          "E_active_minus_sham": 0.06039497079917627
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 19, 1: 3}, min=5')"
+      },
+      "aligned_RVF": 0.06039497079917627
+    },
+    {
+      "subject": "S34",
+      "group": "FAST",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 6, 1: 23}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 7, 1: 33}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 1, 1: 16}, min=5')"
+      }
+    },
+    {
+      "subject": "S36",
+      "group": "FAST",
+      "hemifields": {
+        "LVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 11,
+                "HIT": 22
+              },
+              "psi_observed": 0.006518408604462901,
+              "null_medians": {
+                "N12|3": 0.1264610228451069,
+                "N13|2": 0.05313772200662174,
+                "N23|1": 0.16284764792444895
+              },
+              "hard_null": 0.16284764792444895,
+              "delta_pp": -0.15632923931998605
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 20,
+                "HIT": 17
+              },
+              "psi_observed": 0.31913288378398164,
+              "null_medians": {
+                "N12|3": 0.19886926406234212,
+                "N13|2": 0.19684618925846475,
+                "N23|1": 0.14918184457164665
+              },
+              "hard_null": 0.19886926406234212,
+              "delta_pp": 0.12026361972163951
+            }
+          },
+          "E_active_minus_sham": -0.27659285904162556
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 5, 1: 29}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "site_results": {
+          "ACTIVE": {
+            "counts": {
+              "MISS": 11,
+              "HIT": 19
+            },
+            "psi_observed": 0.022755085461859052,
+            "null_medians": {
+              "N12|3": 0.12706029968047416,
+              "N13|2": 0.05227388246968995,
+              "N23|1": 0.16368164310268457
+            },
+            "hard_null": 0.16368164310268457,
+            "delta_pp": -0.1409265576408255
+          },
+          "SHAM": {
+            "counts": {
+              "MISS": 20,
+              "HIT": 16
+            },
+            "psi_observed": 0.3013384478262456,
+            "null_medians": {
+              "N12|3": 0.19355656346543892,
+              "N13|2": 0.19621140408268606,
+              "N23|1": 0.16359962757817637
+            },
+            "hard_null": 0.19621140408268606,
+            "delta_pp": 0.10512704374355952
+          }
+        },
+        "E_active_minus_sham": -0.24605360138438503
+      },
+      "aligned_LVF": -0.27659285904162556
+    },
+    {
+      "subject": "S41",
+      "group": "FAST",
+      "hemifields": {
+        "LVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 14,
+                "HIT": 18
+              },
+              "psi_observed": 0.11236961755182935,
+              "null_medians": {
+                "N12|3": 0.05289455302387702,
+                "N13|2": 0.07080525794717143,
+                "N23|1": 0.06209452757820853
+              },
+              "hard_null": 0.07080525794717143,
+              "delta_pp": 0.041564359604657916
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 19,
+                "HIT": 14
+              },
+              "psi_observed": 0.04067440848730652,
+              "null_medians": {
+                "N12|3": 0.08985470305947246,
+                "N13|2": 0.11276172987411111,
+                "N23|1": 0.11075217103146964
+              },
+              "hard_null": 0.11276172987411111,
+              "delta_pp": -0.0720873213868046
+            }
+          },
+          "E_active_minus_sham": 0.11365168099146251
+        },
+        "RVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 8,
+                "HIT": 28
+              },
+              "psi_observed": 0.242719886659886,
+              "null_medians": {
+                "N12|3": 0.11083473295867485,
+                "N13|2": 0.15722690911319984,
+                "N23|1": 0.17652375732232353
+              },
+              "hard_null": 0.17652375732232353,
+              "delta_pp": 0.06619612933756247
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 8,
+                "HIT": 14
+              },
+              "psi_observed": 0.20926982782835052,
+              "null_medians": {
+                "N12|3": 0.06058259059962054,
+                "N13|2": 0.02969863933013962,
+                "N23|1": 0.0997076275436537
+              },
+              "hard_null": 0.0997076275436537,
+              "delta_pp": 0.10956220028469682
+            }
+          },
+          "E_active_minus_sham": -0.04336607094713435
+        }
+      },
+      "report_clean_LVF": {
+        "site_results": {
+          "ACTIVE": {
+            "counts": {
+              "MISS": 14,
+              "HIT": 15
+            },
+            "psi_observed": 0.07985533951124435,
+            "null_medians": {
+              "N12|3": 0.03899962300583319,
+              "N13|2": 0.05158006136873083,
+              "N23|1": 0.0674829910912351
+            },
+            "hard_null": 0.0674829910912351,
+            "delta_pp": 0.012372348420009255
+          },
+          "SHAM": {
+            "counts": {
+              "MISS": 19,
+              "HIT": 10
+            },
+            "psi_observed": 0.16459385768923598,
+            "null_medians": {
+              "N12|3": 0.09683808138087718,
+              "N13|2": 0.08104713760974959,
+              "N23|1": 0.09720269909544524
+            },
+            "hard_null": 0.09720269909544524,
+            "delta_pp": 0.06739115859379075
+          }
+        },
+        "E_active_minus_sham": -0.05501881017378149
+      },
+      "aligned_LVF": 0.11365168099146251,
+      "aligned_RVF": -0.04336607094713435
+    },
+    {
+      "subject": "S43",
+      "group": "FAST",
+      "hemifields": {
+        "LVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 8,
+                "HIT": 9
+              },
+              "psi_observed": 0.17906029546245777,
+              "null_medians": {
+                "N12|3": 0.07205481565144886,
+                "N13|2": 0.03858590999341575,
+                "N23|1": 0.02352750040034851
+              },
+              "hard_null": 0.07205481565144886,
+              "delta_pp": 0.10700547981100891
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 10,
+                "HIT": 15
+              },
+              "psi_observed": 0.02565895533551996,
+              "null_medians": {
+                "N12|3": 0.10413320655741551,
+                "N13|2": 0.11458204862509763,
+                "N23|1": 0.1632226779970457
+              },
+              "hard_null": 0.1632226779970457,
+              "delta_pp": -0.13756372266152575
+            }
+          },
+          "E_active_minus_sham": 0.24456920247253466
+        },
+        "RVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 13,
+                "HIT": 13
+              },
+              "psi_observed": 0.04438798049082548,
+              "null_medians": {
+                "N12|3": 0.07925103937362467,
+                "N13|2": 0.017663489820522876,
+                "N23|1": 0.06395627262499767
+              },
+              "hard_null": 0.07925103937362467,
+              "delta_pp": -0.03486305888279919
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 16,
+                "HIT": 13
+              },
+              "psi_observed": 0.14179561324289236,
+              "null_medians": {
+                "N12|3": 0.10316939710350514,
+                "N13|2": 0.20234239280107302,
+                "N23|1": 0.15124894118428234
+              },
+              "hard_null": 0.20234239280107302,
+              "delta_pp": -0.06054677955818066
+            }
+          },
+          "E_active_minus_sham": 0.025683720675381473
+        }
+      },
+      "report_clean_LVF": {
+        "site_results": {
+          "ACTIVE": {
+            "counts": {
+              "MISS": 8,
+              "HIT": 7
+            },
+            "psi_observed": 0.14866874728817633,
+            "null_medians": {
+              "N12|3": 0.07286016545215873,
+              "N13|2": 0.03619215251885311,
+              "N23|1": 0.008401328188402656
+            },
+            "hard_null": 0.07286016545215873,
+            "delta_pp": 0.0758085818360176
+          },
+          "SHAM": {
+            "counts": {
+              "MISS": 10,
+              "HIT": 13
+            },
+            "psi_observed": 0.05186546353082856,
+            "null_medians": {
+              "N12|3": 0.11176635104497415,
+              "N13|2": 0.1448831291296708,
+              "N23|1": 0.15427728261537532
+            },
+            "hard_null": 0.15427728261537532,
+            "delta_pp": -0.10241181908454676
+          }
+        },
+        "E_active_minus_sham": 0.17822040092056435
+      },
+      "aligned_LVF": 0.24456920247253466,
+      "aligned_RVF": 0.025683720675381473
+    },
+    {
+      "subject": "S48",
+      "group": "FAST",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 3, 1: 17}, min=8')"
+        },
+        "RVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 18,
+                "HIT": 17
+              },
+              "psi_observed": -0.16705801839257836,
+              "null_medians": {
+                "N12|3": 0.1602486005461437,
+                "N13|2": 0.15908371296218773,
+                "N23|1": 0.11545548848525872
+              },
+              "hard_null": 0.1602486005461437,
+              "delta_pp": -0.32730661893872204
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 23,
+                "HIT": 18
+              },
+              "psi_observed": 0.36415724433697666,
+              "null_medians": {
+                "N12|3": 0.14200668859491197,
+                "N13|2": 0.17589234580960578,
+                "N23|1": 0.17844644051467787
+              },
+              "hard_null": 0.17844644051467787,
+              "delta_pp": 0.1857108038222988
+            }
+          },
+          "E_active_minus_sham": -0.5130174227610208
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 3, 1: 13}, min=5')"
+      },
+      "aligned_RVF": -0.5130174227610208
+    },
+    {
+      "subject": "S51",
+      "group": "FAST",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 19, 1: 7}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 20, 1: 7}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 31, 1: 2}, min=5')"
+      }
+    },
+    {
+      "subject": "S54",
+      "group": "FAST",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 12, 1: 4}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 17, 1: 4}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 12, 1: 4}, min=5')"
+      }
+    },
+    {
+      "subject": "S59",
+      "group": "FAST",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 6, 1: 13}, min=8')"
+        },
+        "RVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 15,
+                "HIT": 15
+              },
+              "psi_observed": 0.20141651613018216,
+              "null_medians": {
+                "N12|3": 0.16034402074036314,
+                "N13|2": 0.12001520542159666,
+                "N23|1": 0.1017604809411096
+              },
+              "hard_null": 0.16034402074036314,
+              "delta_pp": 0.041072495389819025
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 14,
+                "HIT": 10
+              },
+              "psi_observed": 0.3477071307988485,
+              "null_medians": {
+                "N12|3": 0.11095233283048318,
+                "N13|2": 0.186497815447437,
+                "N23|1": 0.14250771620355812
+              },
+              "hard_null": 0.186497815447437,
+              "delta_pp": 0.16120931535141153
+            }
+          },
+          "E_active_minus_sham": -0.1201368199615925
+        }
+      },
+      "report_clean_LVF": {
+        "site_results": {
+          "ACTIVE": {
+            "counts": {
+              "MISS": 12,
+              "HIT": 21
+            },
+            "psi_observed": -0.0186991378588654,
+            "null_medians": {
+              "N12|3": 0.08879047126403143,
+              "N13|2": 0.10348948427138586,
+              "N23|1": 0.0525285341373352
+            },
+            "hard_null": 0.10348948427138586,
+            "delta_pp": -0.12218862213025126
+          },
+          "SHAM": {
+            "counts": {
+              "MISS": 6,
+              "HIT": 13
+            },
+            "psi_observed": 0.3583472893964263,
+            "null_medians": {
+              "N12|3": 0.08171030557872583,
+              "N13|2": 0.24338597630354622,
+              "N23|1": 0.2233974483179023
+            },
+            "hard_null": 0.24338597630354622,
+            "delta_pp": 0.11496131309288007
+          }
+        },
+        "E_active_minus_sham": -0.23714993522313133
+      },
+      "aligned_RVF": -0.1201368199615925
+    },
+    {
+      "subject": "S60",
+      "group": "FAST",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 2, 1: 40}, min=8')"
+        },
+        "RVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 13,
+                "HIT": 29
+              },
+              "psi_observed": 0.07891466113154622,
+              "null_medians": {
+                "N12|3": 0.17333855941633639,
+                "N13|2": 0.10193753111151432,
+                "N23|1": 0.12420324284284465
+              },
+              "hard_null": 0.17333855941633639,
+              "delta_pp": -0.09442389828479017
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 11,
+                "HIT": 23
+              },
+              "psi_observed": 0.0798500914876877,
+              "null_medians": {
+                "N12|3": 0.1373307288790906,
+                "N13|2": 0.1466661049995578,
+                "N23|1": 0.18223916031728293
+              },
+              "hard_null": 0.18223916031728293,
+              "delta_pp": -0.10238906882959524
+            }
+          },
+          "E_active_minus_sham": 0.00796517054480507
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 2, 1: 8}, min=5')"
+      },
+      "aligned_RVF": 0.00796517054480507
+    },
+    {
+      "subject": "S03",
+      "group": "NEUTRAL",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 9, 1: 3}, min=8')"
+        },
+        "RVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 8,
+                "HIT": 8
+              },
+              "psi_observed": 0.008280201648279155,
+              "null_medians": {
+                "N12|3": 0.09984158117644712,
+                "N13|2": 0.09430658816869292,
+                "N23|1": 0.17869735288840677
+              },
+              "hard_null": 0.17869735288840677,
+              "delta_pp": -0.1704171512401276
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 12,
+                "HIT": 16
+              },
+              "psi_observed": 0.30899712199257734,
+              "null_medians": {
+                "N12|3": 0.1707690261135919,
+                "N13|2": 0.22681999311182754,
+                "N23|1": 0.14936173514085224
+              },
+              "hard_null": 0.22681999311182754,
+              "delta_pp": 0.0821771288807498
+            }
+          },
+          "E_active_minus_sham": -0.25259428012087737
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 9, 1: 3}, min=5')"
+      }
+    },
+    {
+      "subject": "S07",
+      "group": "NEUTRAL",
+      "hemifields": {
+        "LVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 12,
+                "HIT": 17
+              },
+              "psi_observed": 0.2062859960417247,
+              "null_medians": {
+                "N12|3": 0.1351095400493772,
+                "N13|2": 0.12536308810130434,
+                "N23|1": 0.13601565781849315
+              },
+              "hard_null": 0.13601565781849315,
+              "delta_pp": 0.07027033822323156
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 11,
+                "HIT": 30
+              },
+              "psi_observed": 0.1384947531511488,
+              "null_medians": {
+                "N12|3": 0.11851511957620356,
+                "N13|2": 0.08792748311446011,
+                "N23|1": 0.10356020036722632
+              },
+              "hard_null": 0.11851511957620356,
+              "delta_pp": 0.019979633574945227
+            }
+          },
+          "E_active_minus_sham": 0.05029070464828633
+        },
+        "RVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 19,
+                "HIT": 16
+              },
+              "psi_observed": 0.40622699000261264,
+              "null_medians": {
+                "N12|3": 0.21517125999140346,
+                "N13|2": 0.08766063864880168,
+                "N23|1": 0.11755152423276052
+              },
+              "hard_null": 0.21517125999140346,
+              "delta_pp": 0.19105573001120918
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 24,
+                "HIT": 19
+              },
+              "psi_observed": 0.2229546757409605,
+              "null_medians": {
+                "N12|3": 0.12679763615214687,
+                "N13|2": 0.14380314810918549,
+                "N23|1": 0.1399304251349237
+              },
+              "hard_null": 0.14380314810918549,
+              "delta_pp": 0.07915152763177502
+            }
+          },
+          "E_active_minus_sham": 0.11190420237943416
+        }
+      },
+      "report_clean_LVF": {
+        "site_results": {
+          "ACTIVE": {
+            "counts": {
+              "MISS": 12,
+              "HIT": 13
+            },
+            "psi_observed": 0.10282175317329863,
+            "null_medians": {
+              "N12|3": 0.11951125051401393,
+              "N13|2": 0.12488761773829674,
+              "N23|1": 0.13292384485682351
+            },
+            "hard_null": 0.13292384485682351,
+            "delta_pp": -0.030102091683524887
+          },
+          "SHAM": {
+            "counts": {
+              "MISS": 11,
+              "HIT": 17
+            },
+            "psi_observed": 0.21965047670241103,
+            "null_medians": {
+              "N12|3": 0.12300581995074886,
+              "N13|2": 0.10226217391973169,
+              "N23|1": 0.1147514779450793
+            },
+            "hard_null": 0.12300581995074886,
+            "delta_pp": 0.09664465675166217
+          }
+        },
+        "E_active_minus_sham": -0.12674674843518707
+      }
+    },
+    {
+      "subject": "S09",
+      "group": "NEUTRAL",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 4, 1: 25}, min=8')"
+        },
+        "RVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 12,
+                "HIT": 20
+              },
+              "psi_observed": 0.06998773992436998,
+              "null_medians": {
+                "N12|3": 0.19652802243556394,
+                "N13|2": 0.22273425724244267,
+                "N23|1": 0.1586766483599597
+              },
+              "hard_null": 0.22273425724244267,
+              "delta_pp": -0.1527465173180727
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 12,
+                "HIT": 17
+              },
+              "psi_observed": 0.1219009728459227,
+              "null_medians": {
+                "N12|3": 0.27757237775601573,
+                "N13|2": 0.3266364394175001,
+                "N23|1": 0.28006200584759755
+              },
+              "hard_null": 0.3266364394175001,
+              "delta_pp": -0.20473546657157737
+            }
+          },
+          "E_active_minus_sham": 0.05198894925350467
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 4, 1: 18}, min=5')"
+      }
+    },
+    {
+      "subject": "S10",
+      "group": "NEUTRAL",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 32, 1: 6}, min=8')"
+        },
+        "RVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 12,
+                "HIT": 27
+              },
+              "psi_observed": 0.19907179843309875,
+              "null_medians": {
+                "N12|3": 0.13574981942091882,
+                "N13|2": 0.12716857212512178,
+                "N23|1": 0.15356601059270553
+              },
+              "hard_null": 0.15356601059270553,
+              "delta_pp": 0.04550578784039322
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 22,
+                "HIT": 17
+              },
+              "psi_observed": 0.14075803084944358,
+              "null_medians": {
+                "N12|3": 0.1296639996557722,
+                "N13|2": 0.05513731762597271,
+                "N23|1": 0.1503441206811316
+              },
+              "hard_null": 0.1503441206811316,
+              "delta_pp": -0.009586089831688016
+            }
+          },
+          "E_active_minus_sham": 0.055091877672081235
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 32, 1: 4}, min=5')"
+      }
+    },
+    {
+      "subject": "S11",
+      "group": "NEUTRAL",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 6, 1: 21}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 7, 1: 32}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "site_results": {
+          "ACTIVE": {
+            "counts": {
+              "MISS": 13,
+              "HIT": 7
+            },
+            "psi_observed": 0.0335711069873364,
+            "null_medians": {
+              "N12|3": 0.1579842428335697,
+              "N13|2": 0.07831972487575986,
+              "N23|1": 0.1263611226185744
+            },
+            "hard_null": 0.1579842428335697,
+            "delta_pp": -0.12441313584623331
+          },
+          "SHAM": {
+            "counts": {
+              "MISS": 6,
+              "HIT": 9
+            },
+            "psi_observed": 0.028357348960890042,
+            "null_medians": {
+              "N12|3": 0.13592179374880498,
+              "N13|2": 0.12270569996917241,
+              "N23|1": 0.10249480058974364
+            },
+            "hard_null": 0.13592179374880498,
+            "delta_pp": -0.10756444478791494
+          }
+        },
+        "E_active_minus_sham": -0.016848691058318377
+      }
+    },
+    {
+      "subject": "S12",
+      "group": "NEUTRAL",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 3, 1: 20}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 4, 1: 12}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 3, 1: 17}, min=5')"
+      }
+    },
+    {
+      "subject": "S20",
+      "group": "NEUTRAL",
+      "hemifields": {
+        "LVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 9,
+                "HIT": 18
+              },
+              "psi_observed": 0.0843219613209456,
+              "null_medians": {
+                "N12|3": 0.1433825865382089,
+                "N13|2": 0.09541717507415567,
+                "N23|1": 0.11757161539027232
+              },
+              "hard_null": 0.1433825865382089,
+              "delta_pp": -0.059060625217263296
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 17,
+                "HIT": 19
+              },
+              "psi_observed": 0.11403844693717063,
+              "null_medians": {
+                "N12|3": 0.07124223680873626,
+                "N13|2": 0.07378381285040926,
+                "N23|1": 0.19087835727395236
+              },
+              "hard_null": 0.19087835727395236,
+              "delta_pp": -0.07683991033678172
+            }
+          },
+          "E_active_minus_sham": 0.01777928511951843
+        },
+        "RVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 29,
+                "HIT": 9
+              },
+              "psi_observed": 0.09600620902928803,
+              "null_medians": {
+                "N12|3": 0.025170099307160673,
+                "N13|2": 0.06774506772119965,
+                "N23|1": 0.04599062657476548
+              },
+              "hard_null": 0.06774506772119965,
+              "delta_pp": 0.028261141308088378
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 24,
+                "HIT": 14
+              },
+              "psi_observed": 0.35644500896784803,
+              "null_medians": {
+                "N12|3": 0.13720119873258368,
+                "N13|2": 0.15160631476984016,
+                "N23|1": 0.15464394286872105
+              },
+              "hard_null": 0.15464394286872105,
+              "delta_pp": 0.20180106609912699
+            }
+          },
+          "E_active_minus_sham": -0.1735399247910386
+        }
+      },
+      "report_clean_LVF": {
+        "site_results": {
+          "ACTIVE": {
+            "counts": {
+              "MISS": 9,
+              "HIT": 18
+            },
+            "psi_observed": 0.0843219613209456,
+            "null_medians": {
+              "N12|3": 0.14952569277459618,
+              "N13|2": 0.10006676513388027,
+              "N23|1": 0.1157020587982176
+            },
+            "hard_null": 0.14952569277459618,
+            "delta_pp": -0.06520373145365058
+          },
+          "SHAM": {
+            "counts": {
+              "MISS": 17,
+              "HIT": 17
+            },
+            "psi_observed": 0.09508865748650167,
+            "null_medians": {
+              "N12|3": 0.08018792755219285,
+              "N13|2": 0.08646928141273902,
+              "N23|1": 0.20121307430780005
+            },
+            "hard_null": 0.20121307430780005,
+            "delta_pp": -0.10612441682129839
+          }
+        },
+        "E_active_minus_sham": 0.04092068536764781
+      }
+    },
+    {
+      "subject": "S28",
+      "group": "NEUTRAL",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 4, 1: 34}, min=8')"
+        },
+        "RVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 18,
+                "HIT": 16
+              },
+              "psi_observed": 0.43899750413825656,
+              "null_medians": {
+                "N12|3": 0.1280980162629587,
+                "N13|2": 0.11712452737112822,
+                "N23|1": 0.13448478404309921
+              },
+              "hard_null": 0.13448478404309921,
+              "delta_pp": 0.30451272009515734
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 9,
+                "HIT": 13
+              },
+              "psi_observed": 0.11687463997083374,
+              "null_medians": {
+                "N12|3": 0.10958655829447828,
+                "N13|2": 0.07641563698391898,
+                "N23|1": 0.12780713855876707
+              },
+              "hard_null": 0.12780713855876707,
+              "delta_pp": -0.01093249858793334
+            }
+          },
+          "E_active_minus_sham": 0.31544521868309067
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 4, 1: 20}, min=5')"
+      }
+    },
+    {
+      "subject": "S33",
+      "group": "NEUTRAL",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 16, 1: 3}, min=8')"
+        },
+        "RVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 28,
+                "HIT": 14
+              },
+              "psi_observed": 0.1597849842821064,
+              "null_medians": {
+                "N12|3": 0.09551705486650917,
+                "N13|2": 0.10262692942078191,
+                "N23|1": 0.10051016662412068
+              },
+              "hard_null": 0.10262692942078191,
+              "delta_pp": 0.0571580548613245
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 9,
+                "HIT": 13
+              },
+              "psi_observed": 0.37952475013736325,
+              "null_medians": {
+                "N12|3": 0.11211533239586852,
+                "N13|2": 0.19616246712360055,
+                "N23|1": 0.17399468315310374
+              },
+              "hard_null": 0.19616246712360055,
+              "delta_pp": 0.1833622830137627
+            }
+          },
+          "E_active_minus_sham": -0.1262042281524382
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 16, 1: 3}, min=5')"
+      }
+    },
+    {
+      "subject": "S37",
+      "group": "NEUTRAL",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 6, 1: 19}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 2, 1: 19}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 0, 1: 2}, min=5')"
+      }
+    },
+    {
+      "subject": "S40",
+      "group": "NEUTRAL",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 20, 1: 7}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 4, 1: 18}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 20, 1: 2}, min=5')"
+      }
+    },
+    {
+      "subject": "S45",
+      "group": "NEUTRAL",
+      "hemifields": {
+        "LVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 15,
+                "HIT": 13
+              },
+              "psi_observed": 0.11680099793294037,
+              "null_medians": {
+                "N12|3": 0.18831445733611807,
+                "N13|2": 0.147884447276935,
+                "N23|1": 0.16934950623084508
+              },
+              "hard_null": 0.18831445733611807,
+              "delta_pp": -0.0715134594031777
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 12,
+                "HIT": 10
+              },
+              "psi_observed": 0.21318452267352567,
+              "null_medians": {
+                "N12|3": 0.17179780654863946,
+                "N13|2": 0.1785355682816568,
+                "N23|1": 0.20145962478801144
+              },
+              "hard_null": 0.20145962478801144,
+              "delta_pp": 0.01172489788551423
+            }
+          },
+          "E_active_minus_sham": -0.08323835728869193
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 12, 1: 7}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "site_results": {
+          "ACTIVE": {
+            "counts": {
+              "MISS": 15,
+              "HIT": 8
+            },
+            "psi_observed": -0.023663252826425507,
+            "null_medians": {
+              "N12|3": 0.2724804627659593,
+              "N13|2": 0.14406061323858727,
+              "N23|1": 0.16567626932190413
+            },
+            "hard_null": 0.2724804627659593,
+            "delta_pp": -0.2961437155923848
+          },
+          "SHAM": {
+            "counts": {
+              "MISS": 12,
+              "HIT": 7
+            },
+            "psi_observed": 0.25839370284345525,
+            "null_medians": {
+              "N12|3": 0.16976742545678458,
+              "N13|2": 0.16667869644133265,
+              "N23|1": 0.19024333606061467
+            },
+            "hard_null": 0.19024333606061467,
+            "delta_pp": 0.06815036678284059
+          }
+        },
+        "E_active_minus_sham": -0.36429408237522537
+      }
+    },
+    {
+      "subject": "S47",
+      "group": "NEUTRAL",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 6, 1: 30}, min=8')"
+        },
+        "RVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 15,
+                "HIT": 24
+              },
+              "psi_observed": 0.263101433579826,
+              "null_medians": {
+                "N12|3": 0.20082736329065565,
+                "N13|2": 0.1631136385396637,
+                "N23|1": 0.14388254906332004
+              },
+              "hard_null": 0.20082736329065565,
+              "delta_pp": 0.06227407028917037
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 19,
+                "HIT": 20
+              },
+              "psi_observed": 0.01620635411571328,
+              "null_medians": {
+                "N12|3": 0.14747448553201797,
+                "N13|2": 0.16146531018825633,
+                "N23|1": 0.16957285425916002
+              },
+              "hard_null": 0.16957285425916002,
+              "delta_pp": -0.15336650014344674
+            }
+          },
+          "E_active_minus_sham": 0.2156405704326171
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 6, 1: 1}, min=5')"
+      }
+    },
+    {
+      "subject": "S50",
+      "group": "NEUTRAL",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 3, 1: 26}, min=8')"
+        },
+        "RVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 17,
+                "HIT": 11
+              },
+              "psi_observed": 0.16904646700602283,
+              "null_medians": {
+                "N12|3": 0.1393895598183955,
+                "N13|2": 0.12248282763369933,
+                "N23|1": 0.17368483655119918
+              },
+              "hard_null": 0.17368483655119918,
+              "delta_pp": -0.004638369545176352
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 15,
+                "HIT": 13
+              },
+              "psi_observed": -0.001212586822369506,
+              "null_medians": {
+                "N12|3": 0.0786165483065205,
+                "N13|2": 0.17278847708389666,
+                "N23|1": 0.1486374189032931
+              },
+              "hard_null": 0.17278847708389666,
+              "delta_pp": -0.17400106390626616
+            }
+          },
+          "E_active_minus_sham": 0.1693626943610898
+        }
+      },
+      "report_clean_LVF": {
+        "error": "ValueError('trial gate {0: 3, 1: 13}, min=5')"
+      }
+    },
+    {
+      "subject": "S53",
+      "group": "NEUTRAL",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 6, 1: 33}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 6, 1: 32}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "site_results": {
+          "ACTIVE": {
+            "counts": {
+              "MISS": 12,
+              "HIT": 10
+            },
+            "psi_observed": -0.11939618501194021,
+            "null_medians": {
+              "N12|3": 0.05493772470449558,
+              "N13|2": 0.09051279937377812,
+              "N23|1": 0.06630885246513309
+            },
+            "hard_null": 0.09051279937377812,
+            "delta_pp": -0.20990898438571834
+          },
+          "SHAM": {
+            "counts": {
+              "MISS": 6,
+              "HIT": 12
+            },
+            "psi_observed": -0.007079250073981968,
+            "null_medians": {
+              "N12|3": 0.13860024127812498,
+              "N13|2": 0.10676266234160009,
+              "N23|1": 0.18207333984451757
+            },
+            "hard_null": 0.18207333984451757,
+            "delta_pp": -0.18915258991849954
+          }
+        },
+        "E_active_minus_sham": -0.020756394467218803
+      }
+    },
+    {
+      "subject": "S57",
+      "group": "NEUTRAL",
+      "hemifields": {
+        "LVF": {
+          "error": "ValueError('trial gate {0: 6, 1: 31}, min=8')"
+        },
+        "RVF": {
+          "error": "ValueError('trial gate {0: 4, 1: 25}, min=8')"
+        }
+      },
+      "report_clean_LVF": {
+        "site_results": {
+          "ACTIVE": {
+            "counts": {
+              "MISS": 6,
+              "HIT": 6
+            },
+            "psi_observed": -0.011729911020693378,
+            "null_medians": {
+              "N12|3": 0.22370708669895714,
+              "N13|2": 0.44498571443726476,
+              "N23|1": 0.16595317943564142
+            },
+            "hard_null": 0.44498571443726476,
+            "delta_pp": -0.45671562545795813
+          },
+          "SHAM": {
+            "counts": {
+              "MISS": 8,
+              "HIT": 12
+            },
+            "psi_observed": -0.07193545555181202,
+            "null_medians": {
+              "N12|3": 0.12377192355431671,
+              "N13|2": 0.13990865514077522,
+              "N23|1": 0.08209177735724525
+            },
+            "hard_null": 0.13990865514077522,
+            "delta_pp": -0.21184411069258724
+          }
+        },
+        "E_active_minus_sham": -0.2448715147653709
+      }
+    },
+    {
+      "subject": "S61",
+      "group": "NEUTRAL",
+      "hemifields": {
+        "LVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 13,
+                "HIT": 20
+              },
+              "psi_observed": 0.08861094316063269,
+              "null_medians": {
+                "N12|3": 0.13708824313735501,
+                "N13|2": 0.1749874742626328,
+                "N23|1": 0.13072984600417192
+              },
+              "hard_null": 0.1749874742626328,
+              "delta_pp": -0.08637653110200012
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 17,
+                "HIT": 10
+              },
+              "psi_observed": 0.22674250381690347,
+              "null_medians": {
+                "N12|3": 0.11856855668401739,
+                "N13|2": 0.1604231270842736,
+                "N23|1": 0.24623751367547098
+              },
+              "hard_null": 0.24623751367547098,
+              "delta_pp": -0.019495009858567502
+            }
+          },
+          "E_active_minus_sham": -0.06688152124343262
+        },
+        "RVF": {
+          "site_results": {
+            "ACTIVE": {
+              "counts": {
+                "MISS": 11,
+                "HIT": 17
+              },
+              "psi_observed": 0.0006602290676587083,
+              "null_medians": {
+                "N12|3": 0.1389296711699896,
+                "N13|2": 0.10522842784949785,
+                "N23|1": 0.1552187252884089
+              },
+              "hard_null": 0.1552187252884089,
+              "delta_pp": -0.1545584962207502
+            },
+            "SHAM": {
+              "counts": {
+                "MISS": 9,
+                "HIT": 19
+              },
+              "psi_observed": 0.08875892922845081,
+              "null_medians": {
+                "N12|3": 0.258841904996072,
+                "N13|2": 0.23316477002183345,
+                "N23|1": 0.1616294960055324
+              },
+              "hard_null": 0.258841904996072,
+              "delta_pp": -0.17008297576762121
+            }
+          },
+          "E_active_minus_sham": 0.015524479546871
+        }
+      },
+      "report_clean_LVF": {
+        "site_results": {
+          "ACTIVE": {
+            "counts": {
+              "MISS": 13,
+              "HIT": 20
+            },
+            "psi_observed": 0.08861094316063269,
+            "null_medians": {
+              "N12|3": 0.14605877072168227,
+              "N13|2": 0.1648135228512049,
+              "N23|1": 0.11978958085941441
+            },
+            "hard_null": 0.1648135228512049,
+            "delta_pp": -0.07620257969057222
+          },
+          "SHAM": {
+            "counts": {
+              "MISS": 17,
+              "HIT": 10
+            },
+            "psi_observed": 0.22674250381690347,
+            "null_medians": {
+              "N12|3": 0.1137318129662228,
+              "N13|2": 0.15779836446816103,
+              "N23|1": 0.23487894876534793
+            },
+            "hard_null": 0.23487894876534793,
+            "delta_pp": -0.008136444948444455
+          }
+        },
+        "E_active_minus_sham": -0.06806613474212776
+      }
+    }
+  ],
+  "failures": [
+    {
+      "subject": "S08",
+      "group": "SLOW",
+      "reason": "cache missing"
+    }
+  ],
+  "data_root": "E:\\SGIT_DATA\\SGIT_G2B1_OSF_E4BNJ",
+  "feature_cache": "E:\\SGIT_DATA\\SGIT_G2B1_OSF_E4BNJ\\SGIT_G2B1_R3_FEATURE_CACHE",
+  "pre_neural_schema_lock_sha256": "94ec7e6fee9e3f6e98f124b4523358e702f52111b319f7d1ad5099c6eafc4b3a",
+  "claim_if_supported": "causal coupling between alpha-frequency manipulation of conscious visual detection and frozen TRC",
+  "claim_limit": "does not establish metaphysical necessity/sufficiency; report-related processes remain possible in this explicit-report experiment"
+}

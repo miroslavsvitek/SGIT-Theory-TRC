@@ -1,0 +1,3 @@
+# Data and Code Availability
+
+Reusable SGIT-TRC reference code and unit tests are in this repository. Archived original visual-analysis assets are referenced at https://github.com/miroslavsvitek/SGIT-Hodge-Curl-Conscious-Visual-Detection (reference tree `f0ffc52cf0003bdba2e90ca53712375beda6709d`). Historical JSON analysis records and protocol locks are retained with their original provenance. The repository does not redistribute third-party EEG recordings, is not a substitute for datasets under separate licenses, and does not assert independent reproduction of every reported endpoint. A release URL/DOI is assigned only after publication of the release.

@@ -1,0 +1,241 @@
+SGIT G2-A SWS — NO-REPORT TRANSFER TEST
+=========================================
+
+ONE CLICK
+---------
+Program automatically:
+1. finds/reuses OSF dsmjp locally, or downloads it through the public OSF API,
+2. audits file schema,
+3. accepts only scientifically identifiable trial-level EEG,
+4. applies the frozen behavioral gate,
+5. computes SGIT-TRC for SWS phase2 vs phase1,
+6. computes the identical phase contrast for flipped-SWS control,
+7. writes export\SGIT_G2A_SWS_RESULTS_*.zip.
+
+SCIENTIFIC DESIGN
+-----------------
+Phase 1 and Phase 2 use the same physical SWS stimuli and the same orthogonal task
+(one-back on pure tones), so SWS itself is task-irrelevant in both phases.
+
+U = Phase 1 SWS: participant is naive and perceives it as noise/whistles.
+C = Phase 2 SWS: after training, participant perceives the identical SWS as speech.
+
+Control = frequency-flipped SWS. It remains perceived as noise in both phases.
+This control is required to subtract/order-control generic phase/training changes.
+
+BEHAVIORAL GATE
+---------------
+Use a participant only if:
+- Phase 1 distorted-words confidence <= 3,
+- no study word brain/wave/yard identified in Phase 1,
+- Phase 2 distorted-words confidence >= 4.
+The paper retained 17/30 under essentially these criteria.
+Minimum frozen evaluable N for this existing-data transfer test = 15.
+
+FROZEN SGIT
+-----------
+64/222/216
+lag=1, eps=1e-12
+W1=[80,240), W2=[240,400), W3=[400,560) ms
+12 CURL + 12 GRAD
+Hellinger composition
+pooled label-blind ddof=0 Z + condition centering
+S3 axis u=(0.9987567550,-0.0498492160)
+N12|3, N13|2, N23|1
+1024 pair-preserving permutations/family
+
+PRIMARY SUBJECT METRICS
+-----------------------
+Delta_PP_SWS:
+  Phase2 SWS (C) minus Phase1 SWS (U)
+
+Delta_PP_FLIPPED:
+  Phase2 flipped minus Phase1 flipped
+  (order/training control; both are noise percepts)
+
+D_control = Delta_PP_SWS - Delta_PP_FLIPPED
+
+PRIMARY PASS
+------------
+N >= 15
+median Delta_PP_SWS > 0 and one-sided p <= 0.025
+median D_control > 0 and one-sided p <= 0.025
+
+A failure is not rescued by another window, channel subset, axis, or subgroup.
+
+DATA ADAPTER
+------------
+Preferred formats:
+- already epoched .mat/.npz/.set/.fif with phase/stimulus identity,
+- BrainVision .vhdr/.vmrk/.eeg with identifiable event semantics.
+
+Channel rule:
+- exact frozen 64 standard labels are preferred.
+- if >64 standard scalp labels exist and all frozen 64 are present, reorder exactly.
+- otherwise, if explicit electrode coordinates exist, a fixed label-blind spatial
+  projection to the frozen 64 standard positions is allowed and reported.
+- if neither is possible, CHANNEL_MAPPING_UNRESOLVED; no guessing.
+
+If phase/stimulus/event semantics cannot be established from the released files,
+the result is SCHEMA_UNRESOLVED, never a fabricated scientific outcome.
+
+
+ADAPTER REVISION R1
+-------------------
+Scientific contrast and all SGIT constants remain unchanged.
+
+Technical fixes:
+- reuse the existing E:\SGIT_DATA\SGIT_G2A_SWS_DSMJP partial download;
+- never download Raw_EEG_13_excluded_subjs;
+- download only the 17 included subjects plus behavior files/sidecars;
+- read BrainVision .vhdr/.vmrk/.eeg directly with MNE;
+- resolve stimulus/phase only from explicit marker semantics or explicit trigger columns in behavior data;
+- if marker semantics are ambiguous, return EVENT_MAPPING_UNRESOLVED with a complete audit, never guess.
+
+The 17-included folder is the release-defined awareness inclusion set.
+
+
+ADAPTER REVISION R2 — FROZEN BEFORE TRC OUTCOME
+-----------------------------------------------
+No SGIT mathematical/readout constant changes.
+
+R2 resolves the exact technical facts exposed by R1:
+- the released raw EEG contains 96 numbered channels in an equidistant EASYCAP montage;
+- the BrainVision marker codes contain nine stimulus identities per phase, each with
+  70 non-one-back events (1PS) and 30 one-back events (2PS), matching the published
+  100 presentations/stimulus and 30% one-back design.
+
+EVENT DECODING (BEHAVIOR ONLY; NO EEG OUTCOME)
+1. Parse a 3-digit marker HPS:
+   H=1 -> non-one-back trial; H=2 -> one-back/repeat trial
+   P=1,2,3 -> experimental phase
+   S=1..9 -> fixed stimulus identity
+2. Associate a response marker S1 with a repeat trial only if it follows that repeat
+   before the next stimulus onset.
+3. In phases 1+2 the task target is PURE TONE. The three stimulus suffixes with the
+   highest response rate across repeat trials in phases 1+2 are the tone set.
+4. In phase 3 the task target is SWS. The three suffixes with the highest response
+   rate among phase-3 repeat trials are the SWS set.
+5. The remaining three suffixes are FLIPPED SWS.
+6. Hard validation:
+   selected target response rate >=0.70 and non-target <=0.25; SWS and TONE sets
+   must be disjoint and each have exactly three suffixes.
+7. Neural analysis uses ONLY H=1 non-one-back trials from phases 1 and 2.
+
+This derives the trigger map from the orthogonal behavioral task, not from EEG/TRC.
+
+96 -> FROZEN 64 TRANSPORT
+1. Read 3-D channel positions from the BrainVision recording through MNE.
+2. Fit a sphere center to the 96 source electrode positions and normalize them to
+   unit scalp directions.
+3. Create target directions from the named frozen 64 labels in MNE standard_1005.
+4. For each target, take the four nearest source electrodes in angular distance and
+   interpolate using inverse angular distance squared.
+5. This mapping is label-blind and condition-blind.
+6. Technical spatial gate:
+   maximum nearest-target angle <=25 degrees and median <=15 degrees.
+7. If the BrainVision release does not contain usable electrode coordinates, R2 returns
+   SOURCE_COORDINATES_UNAVAILABLE. It does NOT assume a manufacturer numbering scheme.
+
+PREPROCESSING
+-------------
+The external dataset is treated as in the source paper before the frozen SGIT feature:
+- online 0.1-Hz high-pass is already in the raw recording;
+- 25-Hz low-pass;
+- common-average reference over the 96 scalp channels;
+- resample to 250 Hz;
+- epoch -200..800 ms;
+- baseline -200..0 ms;
+- reject source-96 epochs with any |amplitude| >70 uV;
+- apply the fixed 96->64 spatial transport;
+- calculate unchanged SGIT/TRC on W1-W3.
+
+PRIMARY TEST
+------------
+Same as v1.0:
+SWS: Phase2 (speech conscious) vs Phase1 (same SWS heard as noise)
+Control: FLIPPED Phase2 vs Phase1 (noise in both)
+D_control = Delta_PP_SWS - Delta_PP_FLIPPED
+N>=15; median Delta_PP_SWS>0, p<=.025; median D_control>0, p<=.025.
+
+
+ADAPTER REVISION R3 — TRIGGER MAP LOCKED FROM BEHAVIOR-ONLY AUDIT
+-----------------------------------------------------------------
+No SGIT/TRC neural outcome was computed in R2. Therefore the only admissible correction is
+to the technical event decoder; all SGIT mathematical constants remain unchanged.
+
+R2 established from 16 readable included participants:
+- Phase 1/2 repeat-response top set = suffixes 1,2,3, with aggregate rates ~0.93–0.96.
+- Phase 3 repeat-response top set = suffixes 4,5,6, with aggregate rates ~0.89–0.98.
+- Remaining suffixes 7,8,9 = flipped SWS.
+
+The previous decoder failed ONLY because it imposed an unnecessary absolute non-target
+response-rate ceiling of 0.25 in Phase 3. Suffix 9 reached ~0.38, although the rank separation
+between selected SWS suffixes and the best non-selected suffix remained >0.50.
+
+R3 therefore freezes:
+TONE = {1,2,3}
+SWS = {4,5,6}
+FLIPPED = {7,8,9}
+
+Before neural analysis R3 still validates the mapping:
+1. TONE must be the top-3 Phase1/2 repeat-response suffixes.
+2. SWS must be the top-3 Phase3 repeat-response suffixes.
+3. Each selected set must have minimum target response rate >=0.70.
+4. Third-vs-fourth response-rate gap must be >=0.25.
+
+No absolute non-target ceiling is used.
+
+Participant 26 is allowed to remain technically unreadable if its public BrainVision triplet is
+incomplete; the frozen group minimum is N>=15 and the remaining release contains 16 unique readable
+included participants before later technical/artifact exclusions.
+
+The next stage remains unchanged:
+- 96->64 spatial transport is label-blind and geometry-only;
+- SWS Phase2 vs Phase1 is the primary no-report contrast;
+- FLIPPED Phase2 vs Phase1 is the phase/training control;
+- one-back trials are excluded from neural analysis.
+
+
+ADAPTER REVISION R4 — PUBLISHED MONTAGE No.60 TEMPLATE TRANSPORT
+----------------------------------------------------------------
+R3 produced NO neural/TRC result. It failed before preprocessing because the public
+BrainVision headers do not contain 3-D electrode coordinates.
+
+The missing geometry is nevertheless published independently of the neural result:
+Hendry thesis, Appendix C, Figure 17 explicitly shows "equidistant 96Channel
+Montage No. 60" overlaid with the International 10%-System, both centered around Cz.
+The final SWS publication independently states that the EEG used a 96-electrode
+equidistant EASYCAP montage.
+
+R4 freezes a TEMPLATE TRANSPORT before opening any SWS TRC outcome:
+
+1. Source centers 1..95 were digitized in the coordinate frame of published Figure 17.
+2. Frozen target labels use the standard_1005 10%-system geometry, projected to the
+   same top-view frame at PACKAGE BUILD TIME.
+3. The overlay center is Cz and the scale is frozen at 2200 figure-pixels per projected
+   target-coordinate unit.
+4. Each frozen target is reconstructed from the four nearest numbered source sites
+   using inverse squared distance. Rows sum exactly to one.
+5. The template passes the frozen spatial support gate:
+   median nearest distance <=30 px and maximum <=60 px.
+6. Source channel 96 has no independently resolved numbered position in the published
+   figure used here. It therefore receives zero spatial-interpolation weight.
+   It remains in common-average referencing and in the source-space artifact gate.
+7. The 96->64 matrix is identical for every participant and every condition.
+   It never uses EEG amplitude, phase, behavioral labels, Delta_PP, or group outcome.
+
+IMPORTANT INTERPRETATION
+------------------------
+Because this is a template rather than participant-specific digitized electrode geometry,
+R4 is a strong external REPORT-INDEPENDENCE TRANSFER test, but not an exact sensor-montage
+replication. A positive frozen result is strong supportive evidence. A negative result must
+be interpreted jointly with the template-transport limitation and cannot alone establish
+that exact frozen SGIT on an exact 64-channel acquisition has been falsified.
+
+The neural test itself remains unchanged:
+- TONE={1,2,3}, SWS={4,5,6}, FLIPPED={7,8,9}, frozen before neural outcome.
+- One-back trials excluded.
+- SWS Phase2 vs Phase1 primary no-report contrast.
+- FLIPPED Phase2 vs Phase1 phase/training control.
+- unchanged frozen SGIT/TRC, pair-preserving nulls, alpha and N gate.

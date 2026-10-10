@@ -1,0 +1,100 @@
+SGIT G2-B1 R3 — FINAL PRE-NEURAL FROZEN CAUSAL TEST
+====================================================
+
+This package performs the first SGIT/TRC computation on Di Gregorio Experiment 2.
+
+WHAT WAS FROZEN BEFORE NEURAL OUTCOME
+-------------------------------------
+The preceding R2 audit inspected all 102 EEGLAB files and computed NO TRC.
+
+Exact semantics:
+ tL = target-left
+ tR = target-right
+ cL = catch-left
+ cR = catch-right
+ tms_complete.set = ACTIVE
+ sham_complete.set = SHAM
+ IAF - 1 GROUP = SLOW
+ IAF GROUP = NEUTRAL
+ IAF + 1 GROUP = FAST
+
+The audit found that the primary button event can be encoded as "resp" in some files
+and as "TMS" in others. Therefore event TYPE is not used for the response. The primary
+button response is defined only by task timing:
+  any poststimulus event 100 <= latency < 1500 ms.
+The paper states that confidence is prompted only ~1.5-2 s after stimulus onset.
+
+BEHAVIORAL SCHEMA GATE — RUNS BEFORE TRC
+----------------------------------------
+From target/catch and response/no-response:
+ d' = z(hit rate) - z(false alarm rate), loglinear corrected.
+
+Before neural data are interpreted, the adapter must reproduce the externally published
+direction in the contralateral LVF:
+ SLOW: active-sham d' < 0
+ FAST: active-sham d' > 0
+
+The combined aligned behavioral effect must have median >0 and one-sided participant
+sign-flip p <= .05. If not, the program stops before TRC.
+
+PRIMARY SGIT TEST
+-----------------
+LVF target trials only:
+ C = HIT
+ U = MISS
+
+For each subject:
+ DeltaPP_ACTIVE
+ DeltaPP_SHAM
+ E = DeltaPP_ACTIVE - DeltaPP_SHAM
+
+Alignment to the causal behavioral intervention:
+ SLOW -> -E
+ FAST -> +E
+
+Prediction:
+ median(aligned_LVF) > 0
+ one-sided participant sign-flip p <= .025
+
+Frozen evaluability:
+ at least 8 HIT and 8 MISS per ACTIVE/SHAM LVF cell
+ at least N=20 total across SLOW+FAST
+ at least 8 subjects from each group
+
+WHY 8, NOT THE CANONICAL 25
+---------------------------
+This amendment was frozen before any neural outcome and follows from the public design
+plus the R2 audit only:
+ - 180 trials per stimulation type;
+ - 50% target trials;
+ - ~50% target location in each hemifield;
+ - the authors' TMS cleaning removes about one third of epochs.
+Thus 25 HIT and 25 MISS in each stimulation-by-LVF cell is structurally impossible.
+The lower gate makes this a dataset-adapted causal test, not a canonical trial-rich
+replication. The pair-preserving nulls and group test remain frozen.
+
+SECONDARY CONTROLS
+------------------
+- same aligned effect in RVF;
+- LVF minus RVF lateralized specificity;
+- NEUTRAL IAF active-sham effect;
+- exploratory report-clean sensitivity using only HIT trials whose button response is >=600 ms.
+
+PREPROCESSING
+-------------
+Use released preprocessed EEG as supplied. The authors already applied TESA TMS-artifact
+removal/interpolation, two ICA rounds, filtering, average reference, and visual rejection.
+R3 does NOT re-reference or re-clean the data.
+
+CHANNELS
+--------
+Each file can lack different bad electrodes. For every file independently:
+- direct-copy every frozen target that exists;
+- reconstruct each missing frozen target from the four nearest AVAILABLE scalp channels
+  in the frozen standard_1005 geometry using inverse-angle-squared weights.
+This is completely condition-, label-, and outcome-blind.
+
+NO NETWORK
+----------
+The 11+ GB Experiment-2 data already on E: are reused. Nothing is downloaded.
+Feature caches are stored beside the dataset and survive restart.

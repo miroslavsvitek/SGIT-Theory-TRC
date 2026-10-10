@@ -1,0 +1,69 @@
+{
+  "manuscript": "SGIT-TRC reference protocol",
+  "protocol_status": "mathematical specification only; not a complete empirical freeze",
+  "nodes": 64,
+  "edges": 222,
+  "triangles": 216,
+  "positive_curl_modes": 153,
+  "positive_grad_modes": 63,
+  "selected_modes": 12,
+  "curl_ranks_zero_based": [
+    0,
+    14,
+    28,
+    41,
+    55,
+    69,
+    83,
+    97,
+    111,
+    124,
+    138,
+    152
+  ],
+  "grad_ranks_zero_based": [
+    0,
+    6,
+    11,
+    17,
+    23,
+    28,
+    34,
+    39,
+    45,
+    51,
+    56,
+    62
+  ],
+  "windows_ms_half_open": [
+    [
+      80,
+      240
+    ],
+    [
+      240,
+      400
+    ],
+    [
+      400,
+      560
+    ]
+  ],
+  "local_relation_lag_samples": 1,
+  "local_relation_epsilon": 1e-12,
+  "pair_preserving_draws_per_family": 1024,
+  "symmetry_direction": [
+    0.998756755,
+    -0.049849216
+  ],
+  "must_import_from_original_archive": [
+    "canonical electrode order and coordinates",
+    "exact oriented edge and triangle arrays",
+    "exact frozen CURL and GRAD eigenvectors",
+    "voltage units and preprocessing",
+    "participant trial labels",
+    "zero-variance exclusion, log-energy regularization and random seeds",
+    "dataset-specific source montage transport",
+    "full subject-wise experimental results"
+  ]
+}

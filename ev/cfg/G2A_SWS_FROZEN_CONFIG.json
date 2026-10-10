@@ -1,0 +1,172 @@
+{
+  "experiment_id": "SGIT_G2A_SWS_NOREPORT_TRANSFER",
+  "version": "1.0",
+  "source": {
+    "study": "Zhu et al. 2024, J Neurosci",
+    "doi": "10.1523/JNEUROSCI.0145-23.2023",
+    "osf_node": "dsmjp",
+    "api_root": "https://api.osf.io/v2/nodes/dsmjp/files/osfstorage/?page[size]=100",
+    "recorded_N": 30,
+    "paper_primary_N": 17
+  },
+  "scientific_claim": "Report-independent conscious-content transfer test",
+  "primary_contrast": {
+    "C": "phase 2 SWS: task-irrelevant, perceived as speech",
+    "U": "phase 1 SWS: task-irrelevant, perceived as noise",
+    "physical_stimulus": "identical SWS tokens",
+    "control": "flipped SWS phase2 vs phase1; perceived as noise in both phases"
+  },
+  "behavioral_gate": {
+    "phase1_distorted_words_confidence_max": 3,
+    "phase1_no_study_word_identified": [
+      "brain",
+      "wave",
+      "yard"
+    ],
+    "phase2_distorted_words_confidence_min": 4,
+    "minimum_evaluable_N": 15
+  },
+  "preprocessing": {
+    "target_sfreq_hz": 250.0,
+    "lowpass_hz": 25.0,
+    "reference": "common_average",
+    "epoch_ms": [
+      -200.0,
+      800.0
+    ],
+    "artifact_peak_abs_uv": 70.0,
+    "baseline_ms": [
+      -200.0,
+      0.0
+    ],
+    "exclude_one_back": true,
+    "continuous_lowpass_hz": 25.0,
+    "continuous_average_reference": true,
+    "artifact_gate_applied_on_source_96_before_transport": true
+  },
+  "hodge": {
+    "N": 64,
+    "E": 222,
+    "T": 216,
+    "curl_indices_zero_based": [
+      0,
+      14,
+      28,
+      41,
+      55,
+      69,
+      83,
+      97,
+      111,
+      124,
+      138,
+      152
+    ],
+    "grad_indices_zero_based": [
+      0,
+      6,
+      11,
+      17,
+      23,
+      28,
+      34,
+      39,
+      45,
+      51,
+      56,
+      62
+    ]
+  },
+  "edge_flow": {
+    "lag_samples": 1,
+    "epsilon": 1e-12
+  },
+  "windows_ms": [
+    [
+      80.0,
+      240.0
+    ],
+    [
+      240.0,
+      400.0
+    ],
+    [
+      400.0,
+      560.0
+    ]
+  ],
+  "S3_axis": [
+    0.998756755,
+    -0.049849216
+  ],
+  "pair_preserving": {
+    "families": [
+      "N12|3",
+      "N13|2",
+      "N23|1"
+    ],
+    "permutations_per_family": 1024
+  },
+  "group_test": {
+    "alpha_one_sided": 0.025,
+    "mc_signflips": 99999,
+    "seed": 20261007
+  },
+  "primary_pass": "N>=15 AND median(Delta_PP_SWS)>0 AND p_SWS<=0.025 AND median(D_control)>0 AND p_control<=0.025",
+  "D_control": "Delta_PP_SWS - Delta_PP_FLIPPED",
+  "interpretation": "Existing-data report-independent transfer. Positive result supports report-independence of TRC but does not establish causal necessity.",
+  "adapter_revision": "R4_PUBLISHED_MONTAGE60_TEMPLATE_TRANSPORT",
+  "science_constants_changed_from_v1_0": false,
+  "download_filter": {
+    "include": [
+      "/Behavior (all groups).csv",
+      "/Behavior_17_included_subjs.xlsx",
+      "/Raw_EEG_17_included_subjs/"
+    ],
+    "exclude": [
+      "/Raw_EEG_13_excluded_subjs/"
+    ],
+    "reuse_partial_download": true,
+    "preferred_root": "E:\\SGIT_DATA\\SGIT_G2A_SWS_DSMJP"
+  },
+  "event_decoder": {
+    "mapping_locked_before_neural_outcome": true,
+    "tone_suffixes": [
+      1,
+      2,
+      3
+    ],
+    "sws_suffixes": [
+      4,
+      5,
+      6
+    ],
+    "flipped_suffixes": [
+      7,
+      8,
+      9
+    ],
+    "evidence": "R2 behavior-only marker audit, no TRC/neural outcome computed",
+    "validation": {
+      "target_sets_must_be_top3_by_response_rate": true,
+      "minimum_selected_target_rate": 0.7,
+      "minimum_rank_gap_third_vs_fourth": 0.25,
+      "absolute_nontarget_rate_gate_removed": true,
+      "reason": "phase-3 flipped stimuli can attract responses after SWS learning; this does not make stimulus identity ambiguous"
+    },
+    "one_back_trials_excluded_from_neural_analysis": true
+  },
+  "channel_transport": {
+    "primary_file": "support/MONTAGE60_TEMPLATE_TRANSPORT_R4.json",
+    "method": "published_figure_template_4NN_IDW2",
+    "source_sites_used": "raw channels 1..95",
+    "source_channel_96": "excluded_from_spatial_transport_only; retained in common-average/artifact preprocessing",
+    "target": "frozen named 64-channel system",
+    "condition_blind": true,
+    "label_blind": true,
+    "neural_outcome_blind": true,
+    "quality_gate_median_nearest_px_max": 30.0,
+    "quality_gate_max_nearest_px_max": 60.0,
+    "interpretation": "template-transport external no-report test; PASS is supportive, FAIL cannot by itself prove exact frozen-montage falsification"
+  }
+}

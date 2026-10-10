@@ -1,0 +1,92 @@
+{
+  "experiment_id": "SGIT_G2B1_ALPHA_TMS_DIRECT_CAUSAL_CONSCIOUS_ACCESS_FINAL",
+  "version": "1.3",
+  "scientific_status": "PRENEURAL_FROZEN_CONFIRMATORY_ADAPTER",
+  "dataset": {
+    "study": "Di Gregorio et al. 2022 Current Biology",
+    "doi": "10.1016/j.cub.2022.01.003",
+    "osf": "e4bnj",
+    "experiment": 2,
+    "N": 51
+  },
+  "primary": {
+    "hemifield": "LVF",
+    "C": "HIT target",
+    "U": "MISS target",
+    "stimulation": [
+      "ACTIVE",
+      "SHAM"
+    ],
+    "groups": [
+      "SLOW",
+      "FAST"
+    ],
+    "E": "DeltaPP_ACTIVE - DeltaPP_SHAM",
+    "aligned": "-E for SLOW; +E for FAST",
+    "prediction": "median(aligned)>0",
+    "min_trials_each_label_each_stim": 8,
+    "min_N": 20,
+    "min_each_group": 8,
+    "alpha_one_sided": 0.025
+  },
+  "secondary": {
+    "RVF_same_analysis": true,
+    "lateralized_specificity": "aligned_LVF - aligned_RVF",
+    "NEUTRAL_active_sham_reported": true,
+    "pre_response_clean_sensitivity": "HIT response latency >=600 ms; exploratory only"
+  },
+  "frozen_sgit": {
+    "nodes": 64,
+    "edges": 222,
+    "triangles": 216,
+    "lag_samples": 1,
+    "epsilon": 1e-12,
+    "sampling_hz": 250,
+    "windows_ms": [
+      [
+        80,
+        240
+      ],
+      [
+        240,
+        400
+      ],
+      [
+        400,
+        560
+      ]
+    ],
+    "s3_axis": [
+      0.998756755,
+      -0.049849216
+    ],
+    "pair_nulls": [
+      "N12|3",
+      "N13|2",
+      "N23|1"
+    ],
+    "permutations": 1024,
+    "group_signflip_mc": 99999,
+    "group_seed": 20261008
+  },
+  "behavior_gate": {
+    "response_ms": [
+      100,
+      1500
+    ],
+    "combined_aligned_alpha": 0.05,
+    "must_pass_before_features": true
+  },
+  "data_root_candidates": [
+    "E:\\SGIT_DATA\\SGIT_G2B1_OSF_E4BNJ",
+    "D:\\Záloha SGIT\\SGIT_G2B1_OSF_E4BNJ"
+  ],
+  "feature_cache_name": "SGIT_G2B1_R3_FEATURE_CACHE",
+  "decision": {
+    "SUPPORTED": "behavior schema gate passes AND primary N/group gates pass AND median aligned_LVF>0 AND p<=.025",
+    "NOT_SUPPORTED": "behavior schema valid and primary N is evaluable but neural gate fails",
+    "NOT_EVALUABLE": "behavior schema unresolved or neural trial/N gate fails",
+    "claim": "causal coupling between alpha-frequency manipulation of conscious visual detection and frozen TRC",
+    "limit": "does not establish metaphysical necessity/sufficiency; report-related processes remain possible in this explicit-report experiment"
+  }
+}
